@@ -205,7 +205,8 @@ def task_page():
 
 # Navigation Logic
 def main():
-    query_params = st.experimental_get_query_params()
+    # بدل دیا گیا: st.experimental_get_query_params -> st.query_params
+    query_params = st.query_params
     page = query_params.get("page", [""])[0]
 
     if not st.session_state.logged_in:
